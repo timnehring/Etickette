@@ -1,4 +1,4 @@
-# corona-shopping
+# Etickette
 
 ## Project setup
 ```

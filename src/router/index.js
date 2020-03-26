@@ -1,14 +1,33 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import Shop from '../views/Shop.vue';
+import Impressum from '../views/Impressum.vue';
+import Booking from '../views/Booking.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
+  // { path: '/home', redirect: '/' },
   {
     path: '/',
     name: 'Home',
     component: Home,
+  },
+  {
+    path: '/shop',
+    name: 'Shop',
+    component: Shop,
+  },
+  {
+    path: '/impressum',
+    name: 'Impressum',
+    component: Impressum,
+  },
+  {
+    path: '/booking',
+    name: 'Booking',
+    component: Booking,
   },
   {
     path: '/about',
