@@ -1,0 +1,80 @@
+[
+  {
+    "id": 80,
+    "timespan": "08-09",
+    "slotsTaken": 42,
+    "slotsFree": 50
+  },
+  {
+    "id": 90,
+    "timespan": "09-10",
+    "slotsTaken": 6,
+    "slotsFree": 50
+  },
+  {
+    "id": 100,
+    "timespan": "10-11",
+    "slotsTaken": 36,
+    "slotsFree": 50
+  },
+  {
+    "id": 110,
+    "timespan": "11-12",
+    "slotsTaken": 12,
+    "slotsFree": 30
+  },
+  {
+    "id": 120,
+    "timespan": "12-13",
+    "slotsTaken": 25,
+    "slotsFree": 50
+  },
+  {
+    "id": 130,
+    "timespan": "13-14",
+    "slotsTaken": 0,
+    "slotsFree": 0
+  },
+  {
+    "id": 140,
+    "timespan": "14-15",
+    "slotsTaken": 50,
+    "slotsFree": 50
+  },
+  {
+    "id": 150,
+    "timespan": "15-16",
+    "slotsTaken": 16,
+    "slotsFree": 50
+  },
+  {
+    "id": 160,
+    "timespan": "16-17",
+    "slotsTaken": 6,
+    "slotsFree": 50
+  },
+  {
+    "id": 170,
+    "timespan": "17-18",
+    "slotsTaken": 5,
+    "slotsFree": 20
+  },
+  {
+    "id": 180,
+    "timespan": "18-19",
+    "slotsTaken": 6,
+    "slotsFree": 50
+  },
+  {
+    "id": 190,
+    "timespan": "19-20",
+    "slotsTaken": 43,
+    "slotsFree": 50
+  },
+  {
+    "id": 200,
+    "timespan": "20-21",
+    "slotsTaken": 14,
+    "slotsFree": 5
+  }
+]

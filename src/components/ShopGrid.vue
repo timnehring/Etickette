@@ -19,6 +19,7 @@
       <v-data-iterator
       :items="shops"
       :search="search"
+      no-results-text="Keine Einträge gefunden."
       hide-default-footer>
       <v-row>
           <v-col cols="12" v-for="shop in shops" :key="shop.name">

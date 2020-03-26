@@ -19,13 +19,13 @@
 
       <v-tabs-items v-model="tab">
         <v-tab-item>
-          <Timeline/>
+          <Timeline :data="periods.slice(0,5)"/>
         </v-tab-item>
         <v-tab-item>
-          <Timeline/>
+          <Timeline :data="periods.slice(5,10)"/>
         </v-tab-item>
         <v-tab-item>
-          <Timeline/>
+          <Timeline :data="periods.slice(10,13)"/>
         </v-tab-item>
       </v-tabs-items>
     </v-card>
@@ -34,6 +34,7 @@
 
 <script>
 import Timeline from '@/components/Timeline.vue';
+import periodData from '@/components/periods.json';
 
 export default {
   components: {
@@ -42,6 +43,7 @@ export default {
   data() {
     return {
       tab: null,
+      periods: periodData,
     };
   },
 };

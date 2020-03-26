@@ -42,88 +42,10 @@
 
 <script>
 export default ({
+  props: ['data'],
   data() {
     return {
-      periods: [
-        {
-          id: 1,
-          timespan: '08-09',
-          slotsTaken: 42,
-          slotsFree: 50,
-        },
-        {
-          id: 2,
-          timespan: '09-10',
-          slotsTaken: 6,
-          slotsFree: 50,
-        },
-        {
-          id: 3,
-          timespan: '10-11',
-          slotsTaken: 36,
-          slotsFree: 50,
-        },
-        {
-          id: 4,
-          timespan: '11-12',
-          slotsTaken: 12,
-          slotsFree: 30,
-        },
-        {
-          id: 5,
-          timespan: '12-13',
-          slotsTaken: 25,
-          slotsFree: 50,
-        },
-        {
-          id: 6,
-          timespan: '13-14',
-          slotsTaken: 0,
-          slotsFree: 0,
-        },
-        {
-          id: 7,
-          timespan: '14-15',
-          slotsTaken: 50,
-          slotsFree: 50,
-        },
-        {
-          id: 8,
-          timespan: '15-16',
-          slotsTaken: 16,
-          slotsFree: 50,
-        },
-        {
-          id: 9,
-          timespan: '16-17',
-          slotsTaken: 6,
-          slotsFree: 50,
-        },
-        {
-          id: 10,
-          timespan: '17-18',
-          slotsTaken: 5,
-          slotsFree: 20,
-        },
-        {
-          id: 11,
-          timespan: '18-19',
-          slotsTaken: 6,
-          slotsFree: 50,
-        },
-        {
-          id: 12,
-          timespan: '19-20',
-          slotsTaken: 43,
-          slotsFree: 50,
-        },
-        {
-          id: 13,
-          timespan: '20-21',
-          slotsTaken: 14,
-          slotsFree: 50,
-        },
-      ],
+      periods: this.data,
     };
   },
   methods: {
