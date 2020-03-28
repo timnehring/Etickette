@@ -4,10 +4,11 @@
       <v-timeline-item
         v-for="period in periods"
         :key="period.id"
-        :color="chooseColor(period.slotsTaken, period.slotsFree)"
+        :color="circleColor(period.slotsTaken, period.slotsFree)"
       >
         <v-card
-          max-width="60vw"
+        max-width="60vw"
+        :disabled="period.slotsFree === period.slotsTaken"
         >
         <v-container class="py-0">
           <v-row>
@@ -16,19 +17,28 @@
                 {{ period.timespan }} Uhr
               </v-card-title>
               <v-card-text class="white text--primary">
-                <p v-if="period.slotsFree !== 0" class="font-weight-bold">
+                <p
+                v-if="slotAvailable(period.slotsTaken, period.slotsFree)"
+                class="font-weight-bold">
                   {{ period.slotsTaken }} von {{ period.slotsFree }} Plätzen sind belegt.
                 </p>
-                <p v-if="period.slotsFree === 0" class="font-weight-bold">
-                  Für diese Zeitspanne werden keine Plätze vergeben.
+                <p
+                v-if="!slotAvailable(period.slotsTaken, period.slotsFree)"
+                class="font-weight-bold">
+                  Keine Plätze verfügbar.
                 </p>
               </v-card-text>
             </v-col>
-            <v-col cols="4" class="green">
+            <v-col
+            cols="4"
+            id="btn-col"
+            >
                 <v-btn
                 id="res-btn"
-                icon
-                to="booking">
+                block
+                to="booking"
+                :disabled="!slotAvailable(period.slotsTaken, period.slotsFree)"
+                class="green">
                 <v-icon size="40">mdi-ticket-account</v-icon>
                 </v-btn>
             </v-col>
@@ -49,9 +59,11 @@ export default ({
     };
   },
   methods: {
-    chooseColor(val1, val2) {
+    circleColor(val1, val2) {
       let color = '';
-      if (val1 / val2 >= 0.8 || val2 === 0) {
+      if (val2 === 0 || val1 === val2) {
+        color = 'grey';
+      } else if (val1 / val2 >= 0.8) {
         color = 'red';
       } else if (val1 / val2 >= 0.5) {
         color = 'orange';
@@ -59,6 +71,17 @@ export default ({
         color = 'green';
       }
       return color;
+    },
+    slotAvailable(val1, val2) {
+      let available = true;
+      if (val2 === 0) {
+        available = false;
+      } else if (val1 === val2) {
+        available = false;
+      } else {
+        available = true;
+      }
+      return available;
     },
   },
 });
@@ -69,5 +92,8 @@ export default ({
     position: relative;
     width: 100%;
     height: 100%;
+  }
+  #btn-col {
+    padding: 0;
   }
 </style>

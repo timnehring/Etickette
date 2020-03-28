@@ -1,18 +1,18 @@
 <template>
   <div class="shop">
-    <Profile/>
+    <ShopProfile/>
     <Picker/>
   </div>
 </template>
 
 <script>
-import Profile from '@/components/Profile.vue';
+import ShopProfile from '@/components/ShopProfile.vue';
 import Picker from '@/components/Picker.vue';
 
 export default {
   name: 'Shop',
   components: {
-    Profile,
+    ShopProfile,
     Picker,
   },
 };

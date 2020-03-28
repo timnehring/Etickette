@@ -1,5 +1,11 @@
 [
   {
+    "id": 70,
+    "timespan": "07-08",
+    "slotsTaken": 10,
+    "slotsFree": 50
+  },
+  {
     "id": 80,
     "timespan": "08-09",
     "slotsTaken": 42,
@@ -20,7 +26,7 @@
   {
     "id": 110,
     "timespan": "11-12",
-    "slotsTaken": 12,
+    "slotsTaken": 30,
     "slotsFree": 30
   },
   {

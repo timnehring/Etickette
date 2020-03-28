@@ -19,13 +19,13 @@
 
       <v-tabs-items v-model="tab">
         <v-tab-item>
-          <Timeline :data="periods.slice(0,5)"/>
+          <Timeline :data="periods.slice(0,6)"/>
         </v-tab-item>
         <v-tab-item>
-          <Timeline :data="periods.slice(5,10)"/>
+          <Timeline :data="periods.slice(6,11)"/>
         </v-tab-item>
         <v-tab-item>
-          <Timeline :data="periods.slice(10,13)"/>
+          <Timeline :data="periods.slice(11,14)"/>
         </v-tab-item>
       </v-tabs-items>
     </v-card>
