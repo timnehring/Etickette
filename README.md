@@ -1,4 +1,8 @@
 # Etickette
+A WIP shopping time scheduler to optimize capacities and minimize potential infection rates during pandemics.
+
+
+
 
 ## Project setup
 ```
